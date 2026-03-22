@@ -1,48 +1,55 @@
 import csv
 import argparse
+from thefuzz import fuzz
 
-
-# --- Data Loading ---
-
-def load_keywords(csv_path):
-    """Load keyword list from a CSV file. Returns a list of keyword strings."""
-    with open(csv_path, newline='') as f:
+def load_keywords(path):
+    with open(path, newline='') as f:
         reader = csv.reader(f)
         return [row[0] for row in reader]
+    
 
-
-def load_text(file_path):
-    """Read a text file and return its contents as a string."""
-    with open(file_path, 'r') as f:
+def load_text(path):
+    with open(path, 'r') as f:
         return f.read()
 
-
-# --- Matching Logic ---
-
 def find_matches(keyword_list, text):
-    """
-    Return all keywords from keyword_list that appear in text.
-    This is still exact string matching — Stage 2 will upgrade this.
-    """
-    return [kw for kw in keyword_list if kw in text]
+    matches = []
+    text = text.lower()
 
+
+    for key in keyword_list:
+        key = key.lower()
+
+        exclude = {'or', 'ar', 'rn', 'pr', 'ui', 'os', 'bi', 'gui', 
+               'c', 'r', 'e', 'lan', 'flex', 'art', 'creative'}
+
+        if key in exclude:
+            continue
+
+        if len(key) <= 3:
+            if key in text:
+                matches.append(key)
+        else:         
+            score = fuzz.partial_ratio(key, text)
+            if score >= 90:
+                matches.append(key)
+    return matches
 
 def compare_keywords(job_keywords, resume_keywords):
-    """
-    Compare two lists of matched keywords using set operations.
-    Returns a dict with three categories for the report.
-    """
     job_set = set(job_keywords)
     resume_set = set(resume_keywords)
 
+    in_both = job_set & resume_set
+    job_only = job_set - resume_set
+    resume_only = resume_set - job_set
+
     return {
-        "in_both":        list(job_set & resume_set),
-        "to_add":         list(job_set - resume_set),   # in job, not resume
-        "resume_only":    list(resume_set - job_set),   # in resume, not job
+        "in_both": list(in_both),
+        "job_only": list(job_only),
+        "resume_only": list(resume_only)
     }
 
-
-def calculate_score(in_both, job_keywords):
+def calculate_score(job_keywords, in_both):
     """
     Score = how many job keywords are covered by the resume.
     Also returns how many more keywords are needed to hit 70%.
@@ -53,17 +60,13 @@ def calculate_score(in_both, job_keywords):
     needed_for_70 = max(0, (total * 0.7) - matched)
     return score, needed_for_70
 
-
-# --- Report Writing ---
-
 def write_section(file, label, keyword_list):
-    """Write a single labeled section to an already-open file."""
+    """Write a Single Labeled Section to an already-open file"""
     file.write(f"{label}:\n")
     file.write(f"{len(keyword_list)}\n\n")
     for kw in keyword_list:
         file.write(kw + "\n")
     file.write("\n\n")
-
 
 def write_report(output_path, score, needed_for_70, results):
     """
@@ -74,53 +77,39 @@ def write_report(output_path, score, needed_for_70, results):
         f.write("Resume Score with this Job Description:\n\n")
         f.write(f"{score:.1f}%\n\n")
         f.write(f"Add {needed_for_70:.0f} keywords to reach 70%\n\n")
-
-        write_section(f, "Keywords to Add to Resume (in Job Description, not Resume)", results["to_add"])
+        write_section(f, "Keywords to Add to Resume (in Job Description, not Resume)", results["job_only"])
         write_section(f, "Keywords in Both Job Description and Resume", results["in_both"])
         write_section(f, "Keywords in Resume Only", results["resume_only"])
 
-
-# --- CLI Entry Point ---
-
 def parse_args():
-    """
-    Define the command-line interface.
-    argparse handles --flags, help text, and error messages automatically.
-    """
     parser = argparse.ArgumentParser(description="Keyword match your resume to a job description.")
-
-    # Required arguments — no defaults, must be passed in
-    parser.add_argument("--job",      required=True,  help="Path to the job description .txt file")
+    parser.add_argument("--job",      required=True,  help="Path to job description .txt file")
     parser.add_argument("--resume",   required=True,  help="Path to your resume .txt file")
-
-    # Optional arguments — sensible defaults so existing files still work
-    parser.add_argument("--keywords", default="unique_keyword_list.csv", help="Path to keyword CSV")
-    parser.add_argument("--output",   default="Report.txt",              help="Output report filename")
-
+    parser.add_argument("--keywords", default="data/keywords.csv", help="Path to keyword CSV")
+    parser.add_argument("--output",   default="Report.txt",        help="Output report filename")
     return parser.parse_args()
-
 
 def main():
     args = parse_args()
 
     # Load all inputs
-    keyword_list  = load_keywords(args.keywords)
-    job_text      = load_text(args.job)
-    resume_text   = load_text(args.resume)
+    print("Loading keywords and files...")
+    keyword_list = load_keywords(args.keywords)
+    job_text = load_text(args.job)
+    resume_text = load_text(args.resume)    
 
-    # Run the matching and comparison
-    job_keywords    = find_matches(keyword_list, job_text)
+    print("Analyzing matches...")
+    job_keywords = find_matches(keyword_list, job_text)
     resume_keywords = find_matches(keyword_list, resume_text)
-    results         = compare_keywords(job_keywords, resume_keywords)
+    results = compare_keywords(job_keywords, resume_keywords)
 
-    # Score and report
-    score, needed = calculate_score(results["in_both"], job_keywords)
-    write_report(args.output, score, needed, results)
+    # Score and Report
+    score, needed_for_70 = calculate_score(job_keywords, results["in_both"])
+    write_report(args.output, score, needed_for_70, results)
 
     # Confirm to the user in the terminal
     print(f"Report written to: {args.output}")
-    print(f"Score: {score:.1f}% | Need {needed:.0f} more to hit 70%")
-
+    print(f"Score: {score:.1f}% | Need {needed_for_70:.0f} more to hit 70%")
 
 if __name__ == "__main__":
     main()
