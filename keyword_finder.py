@@ -1,6 +1,8 @@
 import csv
 import argparse
 from thefuzz import fuzz
+import requests
+from bs4 import BeautifulSoup
 
 def load_keywords(path):
     with open(path, newline='') as f:
@@ -11,6 +13,16 @@ def load_keywords(path):
 def load_text(path):
     with open(path, 'r') as f:
         return f.read()
+    
+def scrape_job_url(url):
+    """
+    Fetch a job posting from a URL and return the text content.
+    Returns a string in same format as load_text() so pipeline continues to work
+    """
+    headers = {'User-Agent': 'Mozilla/5.0'}
+    response = requests.get(url, headers=headers)
+    soup = BeautifulSoup(response.text, 'html.parser')
+    return soup.get_text(separator=' ', strip=True)
 
 def find_matches(keyword_list, text):
     matches = []
@@ -83,9 +95,10 @@ def write_report(output_path, score, needed_for_70, results):
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Keyword match your resume to a job description.")
-    parser.add_argument("--job",      required=True,  help="Path to job description .txt file")
+    parser.add_argument("--job",      required=False,  help="Path to job description .txt file")
+    parser.add_argument("--url",      required= False, help="URL of job posting to scrape")
     parser.add_argument("--resume",   required=True,  help="Path to your resume .txt file")
-    parser.add_argument("--keywords", default="data/keywords.csv", help="Path to keyword CSV")
+    parser.add_argument("--keywords", default="data/ai_generated_keyword_list.csv", help="Path to keyword CSV")
     parser.add_argument("--output",   default="Report.txt",        help="Output report filename")
     return parser.parse_args()
 
@@ -95,7 +108,16 @@ def main():
     # Load all inputs
     print("Loading keywords and files...")
     keyword_list = load_keywords(args.keywords)
-    job_text = load_text(args.job)
+    
+    if args.url:
+        print(f"Scraping job posting from {args.url}...")
+        job_text = scrape_job_url(args.url)
+    elif args.job:
+        job_text = load_text(args.job)
+    else:
+        print("Error: please provide either --job or --url")
+        return
+    
     resume_text = load_text(args.resume)    
 
     print("Analyzing matches...")
