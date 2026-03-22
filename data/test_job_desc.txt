@@ -1,0 +1,74 @@
+Data Engineer Palmer Chiropractic
+Job Details
+Job Location 
+10 - Davenport Campus - Davenport, IA
+Position Type 
+Full Time
+Education Level 
+4 Year Degree
+Job Shift 
+Daytime
+Job Category 
+Information Technology
+Description
+Palmer College of Chiropractic is looking for a Data Engineer!
+ 
+The Data Engineer's role is to plan, build, and manage data pipelines, systems, and applications that help the college achieve its data-driven objectives and targets. The Data Engineer collaborates with the Data Governance team, data analysts, software engineers, and other relevant parties to guarantee the quality, dependability, and accessibility of data throughout the organization. The Data Engineer also uses the most advanced technologies and methods to develop data solutions that are scalable, secure, and effective, and that suit the college's requirements and standards.
+ 
+ORGANIZATIONAL RELATIONSHIPS
+•	Responsible to the Director of Applications and has a support responsibility to all other departments and college personnel as necessary.
+ 
+SPECIFIC DUTIES AND RESPONSIBILITIES
+•	Use SQL, NoSQL, Python, Snowflake, and other tools and technologies to build and maintain data pipelines, systems, and applications that collect, transform, and integrate data from various sources.
+•	Ensure the data solutions meet the standards and policies for data quality, data governance, and data management, and are performant, reliable, secure, and compliant.
+•	Work with the data engineer, data analysts, software engineers, and other stakeholders to understand data needs, design data models, and provide data solutions that support the college's data-driven goals and initiatives.
+•	Research and evaluate new data technologies, tools, and methodologies, and provide recommendations and guidance for data innovation and improvement.
+•	Monitor, troubleshoot, and resolve data issues, and provide technical support and documentation for data solutions.
+•	Create and maintain documentation related to Data configuration, mapping, processes, and solutions.
+•	Develop and implement policies, procedures, and training plans for Data usage and Data governance.
+•	Ensure compliance and regulatory requirements (e.g., PCI, HIPAA, FERPA, etc.) are adhered to for all technology implemented and supported by Palmer College.
+•	Perform all responsibilities in a way that fully complies with Palmer’s Equal Employment Opportunity/Affirmative Action policy.
+•	Perform other duties as assigned.
+ 
+ADDITIONAL SKILLS AND QUALIFICATIONS
+Skills: 
+•	A keen interest in data and in finding data solutions for complex data challenges.
+•	A flexible and creative method that can deliver data solutions at different levels of accuracy and complexity.
+•	Strong skills in technical documentation and communication.
+•	Highly self-driven and focused.
+•	Highly skilled in analysis, organization, and time management to work in a cooperative, team-based environment.
+•	Well-developed skills in public speaking and conflict resolution.
+•	Strong orientation towards customer service.
+Ability to:
+•	Quickly learn the organization's goals and objectives.
+•	Design, build, and maintain data pipelines, systems, and applications that meet the college's data requirements and standards.
+•	Manage storage, optimize data schemas, and ensure data quality and integrity.
+•	Effectively prioritize and complete tasks in a stressful environment and perform multiple assigned duties with time pressures and frequent interruptions.
+Qualifications
+EDUCATION AND EXPERIENCE
+ 
+Minimum Qualifications:
+•	Bachelor's degree or equivalent combination of relevant work experience and education.
+•	Excellent customer service skills and effective communication abilities with individuals at all levels, including external vendors and support.
+•	Proven team-player with strong organizational and time management skills.
+•	Must demonstrate organization, accuracy, thoroughness, and the ability to ensure work quality.
+•	Regular and reliable attendance is required for success in this position.  Availability to work evenings and weekends as required.
+ 
+Desired Qualifications:
+•	3 years of direct experience in data engineering, data warehousing, data integration, or related field.
+•	Evidence of knowledge and skills in, and experience with: 
+o	The principles and practices of data engineering, data warehousing, data integration, and data analytics.
+o	The methodologies and standards of data modeling, data quality, data governance, and data management.
+o	SQL, NoSQL, Python, Snowflake, and other data tools and technologies.
+o	Data analytics, cloud computing, and big data platforms and tools.
+o	Machine learning, data mining, and statistical analysis techniques and tools.
+o	Proficiency in programming languages, such as Python and Java, for creating ETL tools, processes, and automation.
+o	ETL process, creating pipelines for data transformation, data cleaning, aggregation, and enrichment for data analysis.
+o	Integrations, API, and external data connections to enable data ingestion, extraction, and exchange.
+o	Project management and the relevant data privacy laws and practices.
+ 
+ 
+PHYSICAL REQUIREMENTS AND WORK ENVIRONMENT
+•	Perform sedentary to light work in a ventilated, lighted, and temperature-controlled office setting.
+•	Frequent need to stand, stoop, walk, sit, lift light objects (up to 10 pounds) and perform other similar actions during the workday.
+

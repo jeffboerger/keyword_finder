@@ -1,0 +1,48 @@
+Management and Data Professional | Expertise in Python and SQL | BS in Computer Science
+EXPERIENCE
+Sales Analyst Aug 2024 – Present
+Freedom Fun USA, Houston TX
+• Drove 200%+ year-over-year sales growth by analyzing customer demand, identifying seasonal product
+trends, and developing new sales strategies, resulting in record-breaking regional performance.
+• Built Excel reports to track KPIs and sales growth, providing the CEO and Executive Team with data-
+backed insights on regional business performance.
+• Collaborated with executives to migrate company-wide CRM and phone systems, projected to reduce
+each franchise’s operating costs by $600 per month while ensuring compliance with federal regulation.
+• Utilized Excel and Python to prepare data for migration, supported vendor selection, and tested system
+integrations for sales tracking and communication workflows.
+• Designed and implemented checklists, admin guides, and employee training protocols that reduced
+emergency calls to management by 50%+, improving operational efficiency and customer satisfaction.
+Undergraduate Data Analytics Researcher Jun 2023 – Aug 2023
+Brookhaven National Laboratory, Upton NY
+• Designed several unique graphic visualizations from scratch using Python and Data Visualization
+Techniques, allowing clients to simultaneously compare multiple runs of scripts and identify anomalous
+functions and call stacks, resulting in performance increases for the supercomputer.
+• Utilized Python libraries, including Pandas, for Data Analysis and Exploratory Data Analysis (EDA) to
+determine the most useful fields for further analysis.
+• Engaged in ongoing professional development by pursuing knowledge of cutting-edge Data Visualization
+techniques, tools, and technologies, enhancing expertise in Data Analysis and Statistical Analysis.
+• Presented poster of final research project findings, utilizing skills in Data Interpretation and
+Communication to catalog anomalous functions and propose optimizations for supercomputer performance.
+PROJECTS
+Body Traxx Financial Data Analytics May 2024 – July 2024
+• Utilizing Excel to enter and analyze 7 years’ worth of financial data and gain business insights.
+• Aggregating and visualizing the data with Python, Pandas, Matplotlib to compile an expert report.
+• Identified and communicated several critical vulnerabilities to executive shareholders, influencing a
+strategic shift in operations that prevented a significant negative business impact.
+Google Data Analytics and Google Advanced Data Analytics Jan 2024 – May 2024
+• Performed Exploratory Data Analysis (EDA) utilizing Microsoft Excel, SQL, Python with several statistical
+libraries to analyze real-world datasets and compute descriptive statistics to identify trends and correlations.
+• Executed multiple statistical and machine learning analyses, aligned with business needs to extract
+relevant meaning and visualizations from the enterprise data.
+EDUCATION and CERTIFICATIONS
+• Bachelor of Science in Computer Science, Texas State University (Dec 2023)
+• Google Business Intelligence, Google (May 2024)
+• Google Advanced Data Analytics, Google (Mar 2024)
+• Google Data Analytics, Google (Feb 2024)
+TECHNICAL SKILLS
+• Programming and Querying: Python (Pandas, NumPy, Matplotlib), SQL
+• Data Analysis & Modeling: ETL Development, Exploratory Data Analysis (EDA), Predictive
+Analytics, Statistical Analysis, Data Cleaning, Data Wrangling
+• Visualization & Reporting: Tableau, Data Visualization, Dashboarding, BI Reporting
+• Data Management: Data Warehousing, ETL Processes, Microsoft Excel (advanced formulas, Pivot
+Tables, macros), Process Automation
