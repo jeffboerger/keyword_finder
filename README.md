@@ -81,3 +81,4 @@ in the job market.
 - Add phrase matching for multi-word technical terms
 - Integrate with job board APIs for direct URL importing
 - How to Market this for Businesses, so they can see who to interview?
+- **Employer Mode** - A Second page for hiring managers to upload multiple resumes, automatically score and rank all candidates against a job description, and view results in an interactive table with click-to-expand resume preview and CSV Export
