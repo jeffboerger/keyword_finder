@@ -3,6 +3,8 @@ import argparse
 from thefuzz import fuzz
 import requests
 from bs4 import BeautifulSoup
+from docx import Document
+import pdfplumber
 
 def load_keywords(path):
     with open(path, newline='') as f:
@@ -14,6 +16,19 @@ def load_text(path):
     with open(path, 'r') as f:
         return f.read()
     
+def load_docx(file_path):
+    """Extract text from a Word Document (.docx file)"""
+    doc = Document(file_path)
+    return ' '.join([paragraph.text for paragraph in doc.paragraphs])
+
+def load_pdf(file_path):
+    """Extract text from a PDF File."""
+    text = ''
+    with pdfplumber.open(file_path) as pdf:
+        for page in pdf.pages:
+            text += page.extract_text() or ""
+        return text
+
 def scrape_job_url(url):
     """
     Fetch a job posting from a URL and return the text content.
@@ -105,33 +120,49 @@ def parse_args():
 def main():
     args = parse_args()
 
-    # Load all inputs
+    # Load keywords
     print("Loading keywords and files...")
     keyword_list = load_keywords(args.keywords)
-    
+
+    # Load job description
     if args.url:
         print(f"Scraping job posting from {args.url}...")
         job_text = scrape_job_url(args.url)
     elif args.job:
-        job_text = load_text(args.job)
+        ext = args.job.split('.')[-1].lower()
+        if ext == 'docx':
+            job_text = load_docx(args.job)
+        elif ext == 'pdf':
+            job_text = load_pdf(args.job)
+        else:
+            job_text = load_text(args.job)
     else:
         print("Error: please provide either --job or --url")
         return
-    
-    resume_text = load_text(args.resume)    
 
+    # Load resume
     print("Analyzing matches...")
-    job_keywords = find_matches(keyword_list, job_text)
-    resume_keywords = find_matches(keyword_list, resume_text)
-    results = compare_keywords(job_keywords, resume_keywords)
+    ext = args.resume.split('.')[-1].lower()
+    if ext == 'docx':
+        resume_text = load_docx(args.resume)
+    elif ext == 'pdf':
+        resume_text = load_pdf(args.resume)
+    else:
+        resume_text = load_text(args.resume)
 
-    # Score and Report
+    # Run matching
+    job_keywords    = find_matches(keyword_list, job_text)
+    resume_keywords = find_matches(keyword_list, resume_text)
+    results         = compare_keywords(job_keywords, resume_keywords)
+
+    # Score and report
     score, needed_for_70 = calculate_score(job_keywords, results["in_both"])
     write_report(args.output, score, needed_for_70, results)
 
-    # Confirm to the user in the terminal
+    # Confirm to user
     print(f"Report written to: {args.output}")
     print(f"Score: {score:.1f}% | Need {needed_for_70:.0f} more to hit 70%")
+
 
 if __name__ == "__main__":
     main()

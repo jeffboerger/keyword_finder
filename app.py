@@ -1,21 +1,22 @@
 import streamlit as st
-from keyword_finder import(
-    load_keywords, load_text, find_matches,compare_keywords, calculate_score, write_report
+import tempfile
+from keyword_finder import (
+    load_keywords, find_matches, compare_keywords, 
+    calculate_score, load_docx, load_pdf
 )
 
-st.title ("Resume Keyword Analyzer")
+st.title("Resume Keyword Analyzer")
 st.caption("Inspired by What Color is Your Parachute - match your language to employer language")
 
-# Role Selector
+# --- Role Selector ---
 st.subheader("Select Target Role")
 col1, col2, col3 = st.columns(3)
 de = col1.checkbox("Data Engineer", value=True)
 da = col2.checkbox("Data Analyst", value=True)
-swe = col3.checkbox("Software Engineer", value=True)
+swe = col3.checkbox("Software Engineer", value=False)
 
-# Load Keywords based on Role Selection
+# --- Load Keywords ---
 keywords = []
-
 if de:
     keywords += load_keywords('data/de_keywords.csv')
 if da:
@@ -23,16 +24,15 @@ if da:
 if swe:
     keywords += load_keywords('data/swe_keywords.csv')
 
-# Remove Duplicates
 keywords = list(set(keywords))
 
 if not keywords:
     st.warning("Please select at least one role above.")
     st.stop()
 
-st.caption(f"Analyzing Against {len(keywords)} keywords.")
+st.caption(f"Analyzing against {len(keywords)} keywords.")
 
-# Input Section
+# --- Input Section ---
 st.subheader("Job Description")
 job_text = st.text_area("Paste the job description here", height=200)
 
@@ -40,15 +40,28 @@ st.subheader("Your Resume")
 resume_option = st.radio("Input method", ["Paste text", "Upload file"], horizontal=True)
 
 if resume_option == "Upload file":
-    uploaded_file = st.file_uploader("Upload resume as .txt file", type=["txt"])
+    uploaded_file = st.file_uploader(
+        "Upload resume (.txt, .docx, or .pdf)", 
+        type=["txt", "docx", "pdf"]
+    )
     if uploaded_file:
-        resume_text = uploaded_file.read().decode("utf-8")
+        file_type = uploaded_file.name.split('.')[-1].lower()
+        if file_type == 'txt':
+            resume_text = uploaded_file.read().decode("utf-8")
+        elif file_type == 'docx':
+            with tempfile.NamedTemporaryFile(delete=False, suffix='.docx') as tmp:
+                tmp.write(uploaded_file.read())
+                resume_text = load_docx(tmp.name)
+        elif file_type == 'pdf':
+            with tempfile.NamedTemporaryFile(delete=False, suffix='.pdf') as tmp:
+                tmp.write(uploaded_file.read())
+                resume_text = load_pdf(tmp.name)
     else:
         resume_text = ""
 else:
     resume_text = st.text_area("Paste your resume here", height=200)
 
-
+# --- Analyze ---
 if st.button("Analyze"):
     if not job_text or not resume_text:
         st.warning("Please paste both a job description and your resume.")
@@ -59,7 +72,7 @@ if st.button("Analyze"):
             results = compare_keywords(job_keywords, resume_keywords)
             score, needed = calculate_score(job_keywords, results["in_both"])
 
-        # Display Results
+        # --- Display Results ---
         st.subheader("Results")
         col1, col2, col3 = st.columns(3)
         col1.metric("Match Score", f"{score:.1f}%")
