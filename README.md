@@ -80,3 +80,4 @@ in the job market.
 - Add PDF resume support
 - Add phrase matching for multi-word technical terms
 - Integrate with job board APIs for direct URL importing
+- How to Market this for Businesses, so they can see who to interview?
