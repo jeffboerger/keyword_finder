@@ -9,7 +9,15 @@ import pdfplumber
 def load_keywords(path):
     with open(path, newline='') as f:
         reader = csv.reader(f)
-        return [row[0] for row in reader]
+        keywords = []
+        for i, row in enumerate(reader):
+            if not row:
+                continue
+            # Skip header row if first column is literally "keyword"
+            if i == 0 and row[0].lower().strip() == "keyword":
+                continue
+            keywords.append(row[0].lower().strip())
+        return keywords
     
 
 def load_text(path):

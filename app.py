@@ -1,7 +1,8 @@
 import streamlit as st
 import tempfile
+import re
 from keyword_finder import (
-    load_keywords, find_matches, compare_keywords, 
+    load_keywords, find_matches, compare_keywords,
     calculate_score, load_docx, load_pdf
 )
 
@@ -17,13 +18,9 @@ swe = col3.checkbox("Software Engineer", value=False)
 
 # --- Load Keywords ---
 keywords = []
-if de:
-    keywords += load_keywords('data/de_keywords.csv')
-if da:
-    keywords += load_keywords('data/da_keywords.csv')
-if swe:
-    keywords += load_keywords('data/swe_keywords.csv')
-
+keywords += load_keywords('data/data_jobs_keywords.csv')
+keywords += load_keywords('data/soft_skills_keywords.csv')
+keywords += load_keywords('data/industry_keywords.csv')
 keywords = list(set(keywords))
 
 if not keywords:
@@ -41,7 +38,7 @@ resume_option = st.radio("Input method", ["Paste text", "Upload file"], horizont
 
 if resume_option == "Upload file":
     uploaded_file = st.file_uploader(
-        "Upload resume (.txt, .docx, or .pdf)", 
+        "Upload resume (.txt, .docx, or .pdf)",
         type=["txt", "docx", "pdf"]
     )
     if uploaded_file:
@@ -60,6 +57,84 @@ if resume_option == "Upload file":
         resume_text = ""
 else:
     resume_text = st.text_area("Paste your resume here", height=200)
+
+
+# --- Highlighting Function ---
+def highlight_jd(job_text, in_both, job_only):
+    """
+    Returns HTML of the job description with keywords highlighted.
+    Green = keyword in both JD and resume (you have it)
+    Yellow = keyword in JD but not resume (gap - add this)
+    """
+    lines = job_text.split('\n')
+    highlighted_lines = []
+
+    for line in lines:
+        words = line.split()
+        highlighted_words = []
+        i = 0
+
+        while i < len(words):
+            # Try trigram first
+            if i + 2 < len(words):
+                trigram = ' '.join([re.sub(r'[^a-z0-9\s]', '', w.lower()) for w in words[i:i+3]])
+                if trigram in in_both:
+                    phrase = ' '.join(words[i:i+3])
+                    highlighted_words.append(
+                        f'<span style="background-color:#d4edda; color:#155724; '
+                        f'padding:1px 3px; border-radius:3px; font-weight:bold;">{phrase}</span>'
+                    )
+                    i += 3
+                    continue
+                elif trigram in job_only:
+                    phrase = ' '.join(words[i:i+3])
+                    highlighted_words.append(
+                        f'<span style="background-color:#fff3cd; color:#856404; '
+                        f'padding:1px 3px; border-radius:3px; font-weight:bold;">{phrase}</span>'
+                    )
+                    i += 3
+                    continue
+
+            # Try bigram
+            if i + 1 < len(words):
+                bigram = ' '.join([re.sub(r'[^a-z0-9\s]', '', w.lower()) for w in words[i:i+2]])
+                if bigram in in_both:
+                    phrase = ' '.join(words[i:i+2])
+                    highlighted_words.append(
+                        f'<span style="background-color:#d4edda; color:#155724; '
+                        f'padding:1px 3px; border-radius:3px; font-weight:bold;">{phrase}</span>'
+                    )
+                    i += 2
+                    continue
+                elif bigram in job_only:
+                    phrase = ' '.join(words[i:i+2])
+                    highlighted_words.append(
+                        f'<span style="background-color:#fff3cd; color:#856404; '
+                        f'padding:1px 3px; border-radius:3px; font-weight:bold;">{phrase}</span>'
+                    )
+                    i += 2
+                    continue
+
+            # Fall back to single word
+            clean = re.sub(r'[^a-z0-9\s]', '', words[i].lower())
+            if clean in in_both:
+                highlighted_words.append(
+                    f'<span style="background-color:#d4edda; color:#155724; '
+                    f'padding:1px 3px; border-radius:3px; font-weight:bold;">{words[i]}</span>'
+                )
+            elif clean in job_only:
+                highlighted_words.append(
+                    f'<span style="background-color:#fff3cd; color:#856404; '
+                    f'padding:1px 3px; border-radius:3px; font-weight:bold;">{words[i]}</span>'
+                )
+            else:
+                highlighted_words.append(words[i])
+            i += 1
+
+        highlighted_lines.append(' '.join(highlighted_words))
+
+    return '<br/>'.join(highlighted_lines)
+
 
 # --- Analyze ---
 if st.button("Analyze"):
@@ -85,9 +160,25 @@ if st.button("Analyze"):
             st.success("You're above 70% — strong match!")
 
         if results["job_only"]:
-            st.subheader("Keywords to Add to Your Resume")
+            st.subheader("🟡 Keywords to Add to Your Resume")
             st.write(", ".join(sorted(results["job_only"])))
 
         if results["in_both"]:
-            st.subheader("Keywords You Already Have")
+            st.subheader("🟢 Keywords You Already Have")
             st.write(", ".join(sorted(results["in_both"])))
+
+        # --- Highlighted JD ---
+        st.divider()
+        st.subheader("📋 Highlighted Job Description")
+        st.caption("🟢 Green = you have it | 🟡 Yellow = add this to your resume")
+
+        highlighted_html = highlight_jd(
+            job_text,
+            set(results["in_both"]),
+            set(results["job_only"])
+        )
+
+        st.markdown(
+            f'<div style="line-height:1.8; font-size:0.95rem;">{highlighted_html}</div>',
+            unsafe_allow_html=True
+        )
