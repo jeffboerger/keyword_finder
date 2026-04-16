@@ -1,0 +1,347 @@
+keyword,category,industry
+credit risk,financial services,fintech
+credit scoring,financial services,fintech
+risk modeling,financial services,fintech
+quantitative analysis,financial services,fintech
+algorithmic trading,financial services,fintech
+high frequency trading,financial services,fintech
+derivatives pricing,financial services,fintech
+fixed income,financial services,fintech
+portfolio management,financial services,fintech
+risk management,financial services,fintech
+financial modeling,financial services,fintech
+financial forecasting,financial services,fintech
+monte carlo simulation,financial services,fintech
+value at risk,financial services,fintech
+var,financial services,fintech
+market risk,financial services,fintech
+operational risk,financial services,fintech
+anti-money laundering,financial services,fintech
+aml,financial services,fintech
+kyc,financial services,fintech
+know your customer,financial services,fintech
+payment processing,financial services,fintech
+payment fraud,financial services,fintech
+transaction monitoring,financial services,fintech
+reconciliation,financial services,fintech
+general ledger,financial services,fintech
+chart of accounts,financial services,fintech
+financial statements,financial services,fintech
+p&l,financial services,fintech
+profit and loss,financial services,fintech
+balance sheet,financial services,fintech
+revenue recognition,financial services,fintech
+interchange,financial services,fintech
+ach,financial services,fintech
+swift,financial services,fintech
+wire transfer,financial services,fintech
+chargeback,financial services,fintech
+open banking,financial services,fintech
+regtech,financial services,fintech
+basel iii,financial services,fintech
+sox compliance,financial services,fintech
+sarbanes-oxley,financial services,fintech
+cfa,financial services,fintech
+frm,financial services,fintech
+actuarial,financial services,fintech
+survival analysis,financial services,fintech
+loss given default,financial services,fintech
+probability of default,financial services,fintech
+stress testing,financial services,fintech
+backtesting,financial services,fintech
+alpha generation,financial services,fintech
+factor modeling,financial services,fintech
+quantitative research,financial services,fintech
+investment banking,financial services,fintech
+asset management,financial services,fintech
+wealth management,financial services,fintech
+insurance analytics,financial services,fintech
+claims analytics,financial services,fintech
+underwriting analytics,financial services,fintech
+ehr,healthcare,healthcare
+emr,healthcare,healthcare
+electronic health records,healthcare,healthcare
+electronic medical records,healthcare,healthcare
+hl7,healthcare,healthcare
+fhir,healthcare,healthcare
+icd-10,healthcare,healthcare
+icd-10 codes,healthcare,healthcare
+cpt codes,healthcare,healthcare
+loinc,healthcare,healthcare
+snomed,healthcare,healthcare
+snomed ct,healthcare,healthcare
+rxnorm,healthcare,healthcare
+hcpcs,healthcare,healthcare
+claims data,healthcare,healthcare
+clinical data,healthcare,healthcare
+patient data,healthcare,healthcare
+health informatics,healthcare,healthcare
+medical coding,healthcare,healthcare
+revenue cycle,healthcare,healthcare
+revenue cycle management,healthcare,healthcare
+population health,healthcare,healthcare
+clinical trials,healthcare,healthcare
+real world evidence,healthcare,healthcare
+rwe,healthcare,healthcare
+pharmacovigilance,healthcare,healthcare
+adverse event reporting,healthcare,healthcare
+clinical decision support,healthcare,healthcare
+care management,healthcare,healthcare
+utilization management,healthcare,healthcare
+quality measures,healthcare,healthcare
+hedis,healthcare,healthcare
+cms,healthcare,healthcare
+medicare,healthcare,healthcare
+medicaid,healthcare,healthcare
+payer analytics,healthcare,healthcare
+provider analytics,healthcare,healthcare
+interoperability,healthcare,healthcare
+health information exchange,healthcare,healthcare
+hie,healthcare,healthcare
+phi,healthcare,healthcare
+protected health information,healthcare,healthcare
+hitech,healthcare,healthcare
+hipaa compliance,healthcare,healthcare
+meaningful use,healthcare,healthcare
+cdc,healthcare,healthcare
+fda,healthcare,healthcare
+clinical informatics,healthcare,healthcare
+biostatistics,healthcare,healthcare
+epidemiology,healthcare,healthcare
+public health,healthcare,healthcare
+epic,healthcare,healthcare
+cerner,healthcare,healthcare
+meditech,healthcare,healthcare
+allscripts,healthcare,healthcare
+nextgen,healthcare,healthcare
+mirth connect,healthcare,healthcare
+dicom,healthcare,healthcare
+radiology,healthcare,healthcare
+pacs,healthcare,healthcare
+oncology analytics,healthcare,healthcare
+genomics,healthcare,healthcare
+bioinformatics,healthcare,healthcare
+precision medicine,healthcare,healthcare
+drug interaction,healthcare,healthcare
+formulary analytics,healthcare,healthcare
+prior authorization,healthcare,healthcare
+denial management,healthcare,healthcare
+coding accuracy,healthcare,healthcare
+hospital readmission,healthcare,healthcare
+patient outcomes,healthcare,healthcare
+length of stay,healthcare,healthcare
+cost per case,healthcare,healthcare
+conversion rate,ecommerce/retail,retail & ecommerce
+customer lifetime value,ecommerce/retail,retail & ecommerce
+clv,ecommerce/retail,retail & ecommerce
+ltv modeling,ecommerce/retail,retail & ecommerce
+cart abandonment,ecommerce/retail,retail & ecommerce
+checkout funnel,ecommerce/retail,retail & ecommerce
+product recommendations,ecommerce/retail,retail & ecommerce
+personalization engine,ecommerce/retail,retail & ecommerce
+merchandising analytics,ecommerce/retail,retail & ecommerce
+digital shelf,ecommerce/retail,retail & ecommerce
+price optimization,ecommerce/retail,retail & ecommerce
+dynamic pricing,ecommerce/retail,retail & ecommerce
+markdown optimization,ecommerce/retail,retail & ecommerce
+inventory management,ecommerce/retail,retail & ecommerce
+inventory optimization,ecommerce/retail,retail & ecommerce
+demand forecasting,ecommerce/retail,retail & ecommerce
+stockout analysis,ecommerce/retail,retail & ecommerce
+replenishment,ecommerce/retail,retail & ecommerce
+assortment planning,ecommerce/retail,retail & ecommerce
+planogram,ecommerce/retail,retail & ecommerce
+category management,ecommerce/retail,retail & ecommerce
+basket analysis,ecommerce/retail,retail & ecommerce
+market basket,ecommerce/retail,retail & ecommerce
+customer acquisition cost,ecommerce/retail,retail & ecommerce
+cac,ecommerce/retail,retail & ecommerce
+return on ad spend,ecommerce/retail,retail & ecommerce
+roas,ecommerce/retail,retail & ecommerce
+click-through rate,ecommerce/retail,retail & ecommerce
+ctr,ecommerce/retail,retail & ecommerce
+cost per click,ecommerce/retail,retail & ecommerce
+cost per acquisition,ecommerce/retail,retail & ecommerce
+multi-touch attribution,ecommerce/retail,retail & ecommerce
+last click attribution,ecommerce/retail,retail & ecommerce
+first click attribution,ecommerce/retail,retail & ecommerce
+media mix modeling,ecommerce/retail,retail & ecommerce
+mmm,ecommerce/retail,retail & ecommerce
+web analytics,ecommerce/retail,retail & ecommerce
+google analytics 4,ecommerce/retail,retail & ecommerce
+ga4,ecommerce/retail,retail & ecommerce
+adobe analytics,ecommerce/retail,retail & ecommerce
+shopify,ecommerce/retail,retail & ecommerce
+amazon seller central,ecommerce/retail,retail & ecommerce
+walmart marketplace,ecommerce/retail,retail & ecommerce
+dtc,ecommerce/retail,retail & ecommerce
+direct to consumer,ecommerce/retail,retail & ecommerce
+subscription analytics,ecommerce/retail,retail & ecommerce
+churn prediction,ecommerce/retail,retail & ecommerce
+net promoter score,ecommerce/retail,retail & ecommerce
+nps,ecommerce/retail,retail & ecommerce
+customer satisfaction,ecommerce/retail,retail & ecommerce
+csat,ecommerce/retail,retail & ecommerce
+loyalty program analytics,ecommerce/retail,retail & ecommerce
+customer segmentation,ecommerce/retail,retail & ecommerce
+rfm modeling,ecommerce/retail,retail & ecommerce
+recency frequency monetary,ecommerce/retail,retail & ecommerce
+retail analytics,ecommerce/retail,retail & ecommerce
+pos data,ecommerce/retail,retail & ecommerce
+point of sale,ecommerce/retail,retail & ecommerce
+store performance,ecommerce/retail,retail & ecommerce
+foot traffic analysis,ecommerce/retail,retail & ecommerce
+heat mapping,ecommerce/retail,retail & ecommerce
+user experience analytics,ecommerce/retail,retail & ecommerce
+funnel optimization,ecommerce/retail,retail & ecommerce
+session recording,ecommerce/retail,retail & ecommerce
+seo analytics,ecommerce/retail,retail & ecommerce
+supply chain management,supply chain & manufacturing,supply chain & manufacturing
+supply chain optimization,supply chain & manufacturing,supply chain & manufacturing
+logistics analytics,supply chain & manufacturing,supply chain & manufacturing
+demand planning,supply chain & manufacturing,supply chain & manufacturing
+capacity planning,supply chain & manufacturing,supply chain & manufacturing
+production planning,supply chain & manufacturing,supply chain & manufacturing
+warehouse management,supply chain & manufacturing,supply chain & manufacturing
+wms,supply chain & manufacturing,supply chain & manufacturing
+transportation management,supply chain & manufacturing,supply chain & manufacturing
+tms,supply chain & manufacturing,supply chain & manufacturing
+erp,supply chain & manufacturing,supply chain & manufacturing
+sap,supply chain & manufacturing,supply chain & manufacturing
+oracle erp,supply chain & manufacturing,supply chain & manufacturing
+microsoft dynamics,supply chain & manufacturing,supply chain & manufacturing
+sap hana,supply chain & manufacturing,supply chain & manufacturing
+sap bw,supply chain & manufacturing,supply chain & manufacturing
+sap s/4hana,supply chain & manufacturing,supply chain & manufacturing
+mes,supply chain & manufacturing,supply chain & manufacturing
+manufacturing execution system,supply chain & manufacturing,supply chain & manufacturing
+scada,supply chain & manufacturing,supply chain & manufacturing
+iot analytics,supply chain & manufacturing,supply chain & manufacturing
+internet of things,supply chain & manufacturing,supply chain & manufacturing
+sensor data,supply chain & manufacturing,supply chain & manufacturing
+time series sensor,supply chain & manufacturing,supply chain & manufacturing
+predictive maintenance,supply chain & manufacturing,supply chain & manufacturing
+condition monitoring,supply chain & manufacturing,supply chain & manufacturing
+oee,supply chain & manufacturing,supply chain & manufacturing
+overall equipment effectiveness,supply chain & manufacturing,supply chain & manufacturing
+quality control,supply chain & manufacturing,supply chain & manufacturing
+defect detection,supply chain & manufacturing,supply chain & manufacturing
+six sigma,supply chain & manufacturing,supply chain & manufacturing
+lean manufacturing,supply chain & manufacturing,supply chain & manufacturing
+kaizen,supply chain & manufacturing,supply chain & manufacturing
+root cause analysis,supply chain & manufacturing,supply chain & manufacturing
+process improvement,supply chain & manufacturing,supply chain & manufacturing
+operations research,supply chain & manufacturing,supply chain & manufacturing
+linear programming,supply chain & manufacturing,supply chain & manufacturing
+network optimization,supply chain & manufacturing,supply chain & manufacturing
+route optimization,supply chain & manufacturing,supply chain & manufacturing
+last mile delivery,supply chain & manufacturing,supply chain & manufacturing
+vendor analytics,supply chain & manufacturing,supply chain & manufacturing
+procurement analytics,supply chain & manufacturing,supply chain & manufacturing
+sourcing analytics,supply chain & manufacturing,supply chain & manufacturing
+spend analytics,supply chain & manufacturing,supply chain & manufacturing
+supplier risk,supply chain & manufacturing,supply chain & manufacturing
+supply chain visibility,supply chain & manufacturing,supply chain & manufacturing
+digital twin,supply chain & manufacturing,supply chain & manufacturing
+simulation modeling,supply chain & manufacturing,supply chain & manufacturing
+inventory turns,supply chain & manufacturing,supply chain & manufacturing
+lead time analysis,supply chain & manufacturing,supply chain & manufacturing
+on-time delivery,supply chain & manufacturing,supply chain & manufacturing
+fill rate,supply chain & manufacturing,supply chain & manufacturing
+order fulfillment,supply chain & manufacturing,supply chain & manufacturing
+returns analytics,supply chain & manufacturing,supply chain & manufacturing
+edl,supply chain & manufacturing,supply chain & manufacturing
+edi,supply chain & manufacturing,supply chain & manufacturing
+electronic data interchange,supply chain & manufacturing,supply chain & manufacturing
+rag,genai & llm,genai & llm
+retrieval augmented generation,genai & llm,genai & llm
+vector database,genai & llm,genai & llm
+vector embeddings,genai & llm,genai & llm
+embeddings,genai & llm,genai & llm
+semantic search,genai & llm,genai & llm
+hybrid search,genai & llm,genai & llm
+fine-tuning,genai & llm,genai & llm
+lora,genai & llm,genai & llm
+qlora,genai & llm,genai & llm
+prompt engineering,genai & llm,genai & llm
+prompt tuning,genai & llm,genai & llm
+langchain,genai & llm,genai & llm
+llamaindex,genai & llm,genai & llm
+llama index,genai & llm,genai & llm
+openai api,genai & llm,genai & llm
+anthropic api,genai & llm,genai & llm
+hugging face,genai & llm,genai & llm
+foundation models,genai & llm,genai & llm
+large language models,genai & llm,genai & llm
+gpt-4,genai & llm,genai & llm
+llama,genai & llm,genai & llm
+mistral,genai & llm,genai & llm
+claude,genai & llm,genai & llm
+gemini,genai & llm,genai & llm
+palm,genai & llm,genai & llm
+text generation,genai & llm,genai & llm
+text summarization,genai & llm,genai & llm
+question answering,genai & llm,genai & llm
+document understanding,genai & llm,genai & llm
+information extraction,genai & llm,genai & llm
+knowledge graph,genai & llm,genai & llm
+knowledge base,genai & llm,genai & llm
+chunking,genai & llm,genai & llm
+tokenization,genai & llm,genai & llm
+context window,genai & llm,genai & llm
+hallucination mitigation,genai & llm,genai & llm
+guardrails,genai & llm,genai & llm
+responsible ai,genai & llm,genai & llm
+ai ethics,genai & llm,genai & llm
+explainable ai,genai & llm,genai & llm
+xai,genai & llm,genai & llm
+model fairness,genai & llm,genai & llm
+bias detection,genai & llm,genai & llm
+ai safety,genai & llm,genai & llm
+pinecone,genai & llm,genai & llm
+milvus,genai & llm,genai & llm
+qdrant,genai & llm,genai & llm
+chromadb,genai & llm,genai & llm
+pgvector,genai & llm,genai & llm
+weaviate,genai & llm,genai & llm
+faiss,genai & llm,genai & llm
+llmops,genai & llm,genai & llm
+agentic ai,genai & llm,genai & llm
+ai agents,genai & llm,genai & llm
+multi-agent systems,genai & llm,genai & llm
+tool use,genai & llm,genai & llm
+function calling,genai & llm,genai & llm
+langsmith,genai & llm,genai & llm
+arize ai,genai & llm,genai & llm
+whylabs,genai & llm,genai & llm
+inference optimization,genai & llm,genai & llm
+model quantization,genai & llm,genai & llm
+model compression,genai & llm,genai & llm
+onnx runtime,genai & llm,genai & llm
+vllm,genai & llm,genai & llm
+instruction tuning,genai & llm,genai & llm
+reinforcement learning from human feedback,genai & llm,genai & llm
+rlhf,genai & llm,genai & llm
+dpo,genai & llm,genai & llm
+direct preference optimization,genai & llm,genai & llm
+multimodal,genai & llm,genai & llm
+vision language model,genai & llm,genai & llm
+image captioning,genai & llm,genai & llm
+text to image,genai & llm,genai & llm
+stable diffusion,genai & llm,genai & llm
+generative adversarial network,genai & llm,genai & llm
+gan,genai & llm,genai & llm
+diffusion models,genai & llm,genai & llm
+synthetic data generation,genai & llm,genai & llm
+data augmentation,genai & llm,genai & llm
+few-shot learning,genai & llm,genai & llm
+zero-shot learning,genai & llm,genai & llm
+in-context learning,genai & llm,genai & llm
+chain of thought,genai & llm,genai & llm
+cot prompting,genai & llm,genai & llm
+aws bedrock,genai & llm,genai & llm
+azure openai,genai & llm,genai & llm
+vertex ai platform,genai & llm,genai & llm
+cohere,genai & llm,genai & llm
+replicate,genai & llm,genai & llm
+modal,genai & llm,genai & llm

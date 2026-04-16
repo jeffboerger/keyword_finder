@@ -1,0 +1,718 @@
+keyword,category
+a/b deployment,mlops
+a/b testing,data science
+ab initio,etl tools
+acyclic directed graph,data engineering
+ad hoc analysis,analytics
+agile,soft skills
+agile methodology,soft skills
+airbyte,etl tools
+airflow,orchestration tools
+alation,data governance
+algorithms,concepts
+alteryx,etl tools
+amazon redshift,cloud data platforms
+amazon s3,cloud services
+amazon web services,cloud platforms
+amplitude,analytics
+analytical skills,soft skills
+analytical thinking,soft skills
+analytics,analytics
+angular,programming languages
+anomaly detection,data science
+ansible,mlops
+apache airflow,orchestration tools
+apache atlas,data governance
+apache beam,big data frameworks
+apache cassandra,big data frameworks
+apache flink,big data frameworks
+apache hadoop,big data frameworks
+apache hive,big data frameworks
+apache hudi,concepts
+apache iceberg,concepts
+apache kafka,big data frameworks
+apache nifi,big data frameworks
+apache pulsar,big data frameworks
+apache spark,big data frameworks
+apache storm,big data frameworks
+apache superset,visualization tools
+api,concepts
+api design,concepts
+api development,concepts
+api integration,concepts
+architecture,concepts
+argo,orchestration tools
+argocd,mlops
+at least once delivery,advanced concepts
+attention mechanisms,data science
+attention to detail,soft skills
+audit,data governance
+auto-scaling,advanced concepts
+automation,data engineering
+automl,data science
+avro,concepts
+aws,cloud platforms
+aws athena,cloud services
+aws certification,certifications
+aws cloudtrail,cloud services
+aws cloudwatch,cloud services
+aws data analytics specialty,certifications
+aws dynamodb,cloud services
+aws ec2,cloud services
+aws emr,cloud services
+aws glue,cloud services
+aws glue etl,etl tools
+aws iam,cloud services
+aws kinesis,cloud services
+aws lake formation,cloud services
+aws lambda,cloud services
+aws quicksight,cloud services
+aws rds,cloud services
+aws redshift,cloud data platforms
+aws s3,cloud services
+aws sagemaker,cloud services
+aws step functions,cloud services
+azure,cloud platforms
+azure blob storage,cloud services
+azure certification,certifications
+azure data factory,cloud data platforms
+azure data lake,cloud data platforms
+azure kubernetes service,cloud services
+azure synapse,cloud data platforms
+azure synapse analytics,cloud data platforms
+bachelor's degree,education
+backend development,concepts
+backfill,data engineering
+backpressure,advanced concepts
+bash,programming languages
+batch ingestion,data engineering
+batch processing,concepts
+bayesian statistics,data science
+bentoml,mlops
+bert,data science
+bi reporting,analytics
+bigquery,cloud data platforms
+bitbucket,data engineering
+blue-green deployment,mlops
+bokeh,visualization tools
+bronze silver gold,advanced concepts
+business acumen,soft skills
+business glossary,data governance
+business intelligence,analytics
+business keys,advanced concepts
+business requirements,soft skills
+c,programming languages
+c#,programming languages
+c++,programming languages
+caching,concepts
+calculated fields,analytics
+canary deployment,mlops
+caret,r packages
+cassandra,databases
+catboost,python libraries
+ccp data engineer,certifications
+ccpa,data governance
+cdc,data engineering
+cdmp,data governance
+change data capture,data engineering
+churn analysis,analytics
+ci/cd,mlops
+circleci,mlops
+clean code,data engineering
+clickhouse,databases
+cloud,cloud platforms
+cloud computing,cloud platforms
+cloud cost management,advanced concepts
+cloudera certification,certifications
+cluster computing,concepts
+clustering,data science
+cnn,data science
+cockroachdb,databases
+code review,data engineering
+cohort analysis,analytics
+collaboration,soft skills
+collibra,data governance
+column-level security,data governance
+columnar storage,concepts
+common table expressions,concepts
+communication skills,soft skills
+compliance,data governance
+computer science,education
+computer vision,data science
+concept drift,mlops
+confluence,soft skills
+container orchestration,mlops
+containerization,mlops
+continuous delivery,mlops
+continuous deployment,mlops
+continuous integration,mlops
+convolutional neural networks,data science
+cost optimization,advanced concepts
+couchdb,databases
+critical thinking,soft skills
+cron,data engineering
+cronjob,data engineering
+cross functional collaboration,soft skills
+cross-functional collaboration,soft skills
+cross-validation,data science
+css,programming languages
+csv,concepts
+cte,concepts
+customer segmentation,analytics
+d3.js,visualization tools
+dag,data engineering
+dagster,orchestration tools
+dama,data governance
+dama-dmbok,data governance
+dashboard design,analytics
+dashboard development,analytics
+dask,python libraries
+data access controls,data governance
+data analysis,analytics
+data analytics,analytics
+data anonymization,data governance
+data architecture,concepts
+data audit,data governance
+data blending,analytics
+data catalog,data governance
+data classification,data governance
+data cleaning,concepts
+data collection,concepts
+data communication,soft skills
+data compaction,advanced concepts
+data compression,advanced concepts
+data contracts,concepts
+data contracts design,advanced concepts
+data dictionary,data governance
+data drift,mlops
+data driven decision making,analytics
+data encryption,data governance
+data engineer,data engineering
+data engineering,data engineering
+data enrichment,analytics
+data extraction,concepts
+data fabric,concepts
+data freshness,data engineering
+data governance,data governance
+data ingestion,concepts
+data ingestion pipeline,data engineering
+data integration,concepts
+data interpretation,analytics
+data lake,concepts
+data lakehouse,concepts
+data lineage,data governance
+data lineage tracking,data engineering
+data loading,concepts
+data management,data governance
+data mart,concepts
+data masking,data governance
+data mesh,concepts
+data mesh governance,data governance
+data mesh implementation,advanced concepts
+data migration,concepts
+data mining,data science
+data modeling,concepts
+data observability,data governance
+data observability tools,data engineering
+data ownership,data governance
+data partitioning,concepts
+data pipeline,concepts
+data pipelines,concepts
+data policies,data governance
+data preprocessing,concepts
+data privacy,data governance
+data products,concepts
+data profiling,data governance
+data quality,data governance
+data quality framework,data governance
+data quality management,data governance
+data replication,concepts
+data retention,data governance
+data science,data science
+data science degree,education
+data security,data governance
+data serialization,advanced concepts
+data standards,data governance
+data steward,data governance
+data stewardship,data governance
+data storytelling,soft skills
+data structures,concepts
+data synchronization,concepts
+data testing,data engineering
+data transformation,concepts
+data validation,data governance
+data vault,concepts
+data versioning,advanced concepts
+data visualization,visualization tools
+data warehouse,concepts
+data warehousing,concepts
+data wrangling,concepts
+data-driven decision making,analytics
+database management,databases
+databricks,cloud data platforms
+databricks certified,certifications
+dataiku,etl tools
+dataops,data engineering
+dax,analytics
+db2,databases
+dbt,transformation tools
+dbt certification,certifications
+dbt cloud,transformation tools
+dbt core,transformation tools
+dead letter queue,advanced concepts
+debugging,data engineering
+decision making,soft skills
+decision trees,data science
+deep learning,data science
+delta lake,concepts
+denormalization,concepts
+deployment,mlops
+descriptive analytics,data science
+descriptive statistics,data science
+design patterns,concepts
+devops,data engineering
+diagnostic analytics,data science
+dimension tables,concepts
+dimensional modeling,concepts
+dimensionality reduction,data science
+distributed computing,concepts
+distributed systems,concepts
+docker,mlops
+documentation,soft skills
+dplyr,r packages
+druid,big data frameworks
+dwh,concepts
+dynamodb,databases
+eda,data science
+elastic search,databases
+elasticsearch,databases
+elt,concepts
+embedded analytics,analytics
+emr,cloud services
+engineering best practices,data engineering
+engineering degree,education
+etl,concepts
+etl pipeline,concepts
+event driven architecture,concepts
+event sourcing,advanced concepts
+event-driven architecture,concepts
+evidently ai,mlops
+exactly once semantics,advanced concepts
+excel,visualization tools
+experiment tracking,mlops
+exploratory data analysis,data science
+extrapolation,data science
+fact tables,concepts
+fault tolerance,advanced concepts
+feature engineering,concepts
+feature selection,data science
+feature store,concepts
+financial analysis,analytics
+financial modeling,analytics
+fivetran,etl tools
+flink,big data frameworks
+fluentd,data engineering
+flume,big data frameworks
+forecasting,analytics
+fraud analytics,analytics
+fraud detection,data science
+frontend development,concepts
+full refresh,data engineering
+full stack development,concepts
+functional programming,concepts
+funnel analysis,analytics
+fuzzy matching,data science
+ga4,analytics
+gcp,cloud platforms
+gcp certification,certifications
+gcp dataflow,cloud services
+gcp pub/sub,cloud services
+gcp vertex ai,cloud services
+gdpr,data governance
+generative ai,data science
+ggplot2,r packages
+git,data engineering
+github,data engineering
+github actions,mlops
+gitlab,data engineering
+gitlab ci,mlops
+glue,cloud services
+go,programming languages
+golang,programming languages
+google analytics,analytics
+google bigquery,cloud data platforms
+google cloud,cloud platforms
+google cloud platform,cloud platforms
+google cloud storage,cloud services
+google data analytics certificate,certifications
+google data studio,visualization tools
+google professional data engineer,certifications
+google sheets,visualization tools
+gpt,data science
+gradient boosting,data science
+grafana,visualization tools
+grafana monitoring,mlops
+graphql,concepts
+great expectations,python libraries
+great expectations framework,data engineering
+grpc,concepts
+hadoop,big data frameworks
+hbase,big data frameworks
+hbase databases,databases
+hdfs,big data frameworks
+healthcare analytics,analytics
+heap,analytics
+helm,mlops
+high availability,advanced concepts
+hightouch,etl tools
+hipaa,data governance
+hive,programming languages
+horizontal scaling,advanced concepts
+html,programming languages
+html5,programming languages
+http protocols,concepts
+hugging face,python libraries
+hyperparameter tuning,data science
+hypothesis testing,data science
+iac,data engineering
+ibm data engineering,certifications
+ibm datastage,etl tools
+iceberg,concepts
+idempotency,data engineering
+idempotent processing,advanced concepts
+image recognition,data science
+incremental loading,data engineering
+indexing,concepts
+inferential statistics,data science
+informatica,etl tools
+informatica data governance,data governance
+information systems,education
+infrastructure as code,data engineering
+insight generation,analytics
+integration testing,data engineering
+java,programming languages
+javascript,programming languages
+jenkins,mlops
+jira,soft skills
+json,concepts
+julia,programming languages
+junit,data engineering
+jupyter,python libraries
+jupyter notebook,python libraries
+jupyterlab,python libraries
+k-means,data science
+kafka,big data frameworks
+kanban,soft skills
+kappa architecture,advanced concepts
+keras,python libraries
+key performance indicators,analytics
+kfserving,mlops
+kimball methodology,concepts
+kpi,analytics
+kpi development,analytics
+kubeflow,orchestration tools
+kubeflow pipelines,mlops
+kubernetes,mlops
+lakehouse,concepts
+lakehouse architecture,advanced concepts
+lambda architecture,advanced concepts
+langchain,python libraries
+large language models,data science
+late arriving data,advanced concepts
+leadership,soft skills
+lift and shift analysis,analytics
+lightgbm,python libraries
+linear regression,data science
+linux,programming languages
+llm,data science
+llms,data science
+load balancing,advanced concepts
+logistic regression,data science
+looker,visualization tools
+looker studio,visualization tools
+lstm,data science
+luigi,orchestration tools
+machine learning,data science
+mapreduce,big data frameworks
+mariadb,databases
+market basket analysis,analytics
+marketing analytics,analytics
+master data management,data governance
+master's degree,education
+mathematics,education
+matillion,etl tools
+matlab,programming languages
+matplotlib,visualization tools
+mdm,data governance
+mdx,analytics
+medallion architecture,advanced concepts
+meltano,etl tools
+mentoring,soft skills
+message queue,concepts
+metabase,visualization tools
+metadata management,data governance
+metrics,analytics
+metrics layer,advanced concepts
+micro-batch processing,advanced concepts
+microservices,concepts
+microsoft azure,cloud platforms
+microsoft dp-203,certifications
+microsoft excel,visualization tools
+microsoft office,visualization tools
+microsoft power bi,visualization tools
+microsoft purview,data governance
+microsoft sql server,databases
+microstrategy,visualization tools
+mixpanel,analytics
+mlflow,orchestration tools
+mlflow tracking,mlops
+mlops,mlops
+model deployment,mlops
+model drift,mlops
+model evaluation,data science
+model monitoring,mlops
+model registry,mlops
+model serving,mlops
+model versioning,mlops
+modeling,data science
+mongodb,databases
+monte carlo,data governance
+monte carlo data,data engineering
+mrjob,big data frameworks
+mvc architecture,concepts
+mysql,databases
+named entity recognition,data science
+natural keys,advanced concepts
+natural language processing,data science
+neo4j,databases
+neural networks,data science
+nlp,data science
+nlp pipeline,data science
+nltk,python libraries
+node.js,programming languages
+normalization,concepts
+nosql,programming languages
+numpy,python libraries
+object detection,data science
+object oriented programming,concepts
+olap,concepts
+oltp,concepts
+omni,analytics
+onnx,mlops
+oop,concepts
+open table format,advanced concepts
+openai,python libraries
+operational analytics,analytics
+oracle,databases
+orc,concepts
+orchestration,orchestration tools
+out of order events,advanced concepts
+overfitting,data science
+pandas,python libraries
+parallel processing,advanced concepts
+parquet,concepts
+pca,data science
+pentaho,etl tools
+performance optimization,concepts
+performance tuning,concepts
+perl,programming languages
+personally identifiable information,data governance
+php,programming languages
+pig,big data frameworks
+pii,data governance
+pinecone,databases
+pipeline management,data engineering
+pipeline orchestration,data engineering
+pivot tables,analytics
+plotly,visualization tools
+polars,python libraries
+postgres,databases
+postgresql,databases
+power bi,visualization tools
+power bi certification,certifications
+power query,analytics
+predictive analytics,data science
+predictive modeling,data science
+prefect,orchestration tools
+prescriptive analytics,data science
+presentation skills,soft skills
+presto,big data frameworks
+principal component analysis,data science
+probability theory,data science
+problem solving,soft skills
+product analytics,analytics
+project management,soft skills
+prometheus,mlops
+pub/sub,concepts
+pydantic,python libraries
+pyspark,programming languages
+pytest,python libraries
+python,programming languages
+python scripting,programming languages
+pytorch,python libraries
+qlik sense,visualization tools
+qlikview,visualization tools
+quantitative field,education
+query cost optimization,advanced concepts
+query optimization,concepts
+r,programming languages
+r programming,programming languages
+rag pipeline,data science
+random forest,data science
+ray,python libraries
+ray serve,mlops
+rbac,data governance
+react,programming languages
+real-time processing,concepts
+recommendation systems,data science
+recurrent neural networks,data science
+redis,databases
+redshift,cloud data platforms
+regression analysis,data science
+regression testing,data engineering
+regularization,data science
+regulatory compliance,data governance
+reinforcement learning,data science
+remote collaboration,soft skills
+report development,analytics
+reporting,analytics
+requirements gathering,soft skills
+rest,concepts
+rest api,concepts
+retention analysis,analytics
+reverse etl,concepts
+reverse etl implementation,advanced concepts
+rfm analysis,analytics
+rnn,data science
+role-based access control,data governance
+root cause analysis,analytics
+row-level security,data governance
+ruby,programming languages
+rust,programming languages
+s3,cloud services
+sagemaker endpoints,mlops
+sas,programming languages
+scala,programming languages
+scalability,advanced concepts
+scd,advanced concepts
+schema design,concepts
+schema evolution,concepts
+scikit learn,python libraries
+scikit-learn,python libraries
+scipy,python libraries
+scripting,programming languages
+scrum,soft skills
+sdlc,data engineering
+seaborn,visualization tools
+security best practices,data governance
+segment,analytics
+segmentation analysis,analytics
+seldon,mlops
+self-service analytics,analytics
+semantic layer,advanced concepts
+semi-supervised learning,data science
+sentiment analysis,data science
+serverless,advanced concepts
+service level agreement,data engineering
+shell scripting,programming languages
+shiny,r packages
+sigma,analytics
+sla,data engineering
+slow changing dimensions,advanced concepts
+slowly changing dimensions,concepts
+snowflake,cloud data platforms
+snowflake certification,certifications
+snowflake schema,concepts
+soda,python libraries
+soda core,data engineering
+software development lifecycle,data engineering
+software testing,data engineering
+spacy,python libraries
+spark,big data frameworks
+spark streaming,advanced concepts
+speech recognition,data science
+sql,programming languages
+sql server,databases
+sqlalchemy,python libraries
+sqlite,databases
+sqoop,big data frameworks
+ssis,etl tools
+stakeholder communication,soft skills
+stakeholder management,soft skills
+star schema,concepts
+statistical analysis,data science
+statistical modeling,data science
+statistics,education
+statsmodels,python libraries
+stitch,etl tools
+stored procedures,databases
+storytelling with data,soft skills
+stream processing,concepts
+streaming,concepts
+streaming ingestion,data engineering
+streamlit,visualization tools
+structured streaming,advanced concepts
+supabase,cloud data platforms
+superset,visualization tools
+supervised learning,data science
+supply chain analytics,analytics
+surrogate keys,advanced concepts
+swift,programming languages
+system design,concepts
+table format,advanced concepts
+tableau,visualization tools
+tableau certification,certifications
+talend,etl tools
+tcp ip,concepts
+team collaboration,soft skills
+technical writing,soft skills
+tensorflow,python libraries
+teradata,databases
+terraform,mlops
+test driven development,data engineering
+testing,data engineering
+text mining,data science
+tidyverse,r packages
+time series analysis,data science
+time series forecasting,data science
+time travel,advanced concepts
+topic modeling,data science
+torchserve,mlops
+transfer learning,data science
+transformer models,data science
+transformers,python libraries
+trend analysis,analytics
+trino,big data frameworks
+triton inference server,mlops
+typescript,programming languages
+unit test,data engineering
+unit testing,data engineering
+unix,programming languages
+unsupervised learning,data science
+variance analysis,analytics
+vector database,databases
+vendor management,soft skills
+version control,data engineering
+vertex ai,mlops
+vertical scaling,advanced concepts
+visualization,visualization tools
+vlookup,analytics
+vs code,data engineering
+vue.js,programming languages
+wandb,mlops
+warehouse optimization,concepts
+watermarking,advanced concepts
+weaviate,databases
+web development,concepts
+webpack,programming languages
+weights and biases,mlops
+window functions,concepts
+windowing,advanced concepts
+workflow automation,data engineering
+workflow management,data engineering
+workflow orchestration,data engineering
+xgboost,python libraries
+xml,concepts
+yaml,data engineering
+yarn,big data frameworks
+zookeeper,big data frameworks
