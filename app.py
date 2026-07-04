@@ -1,20 +1,14 @@
 import streamlit as st
 import tempfile
 import re
+import os
 from keyword_finder import (
-    load_keywords, find_matches, compare_keywords,
-    calculate_score, load_docx, load_pdf
+    load_keywords, load_categories, find_matches, compare_keywords,
+    calculate_score, calculate_weighted_score, load_docx, load_pdf
 )
 
 st.title("Resume Keyword Analyzer")
 st.caption("Inspired by What Color is Your Parachute - match your language to employer language")
-
-# --- Role Selector ---
-st.subheader("Select Target Role")
-col1, col2, col3 = st.columns(3)
-de = col1.checkbox("Data Engineer", value=True)
-da = col2.checkbox("Data Analyst", value=True)
-swe = col3.checkbox("Software Engineer", value=False)
 
 # --- Load Keywords ---
 keywords = []
@@ -22,9 +16,10 @@ keywords += load_keywords('data/data_jobs_keywords.csv')
 keywords += load_keywords('data/soft_skills_keywords.csv')
 keywords += load_keywords('data/industry_keywords.csv')
 keywords = list(set(keywords))
+categories = load_categories()
 
 if not keywords:
-    st.warning("Please select at least one role above.")
+    st.error("Keyword files not found in data/ — check the repo layout.")
     st.stop()
 
 st.caption(f"Analyzing against {len(keywords)} keywords.")
@@ -44,15 +39,16 @@ if resume_option == "Upload file":
     if uploaded_file:
         file_type = uploaded_file.name.split('.')[-1].lower()
         if file_type == 'txt':
-            resume_text = uploaded_file.read().decode("utf-8")
-        elif file_type == 'docx':
-            with tempfile.NamedTemporaryFile(delete=False, suffix='.docx') as tmp:
+            resume_text = uploaded_file.read().decode("utf-8", errors="replace")
+        elif file_type in ('docx', 'pdf'):
+            loader = load_docx if file_type == 'docx' else load_pdf
+            with tempfile.NamedTemporaryFile(delete=False, suffix=f'.{file_type}') as tmp:
                 tmp.write(uploaded_file.read())
-                resume_text = load_docx(tmp.name)
-        elif file_type == 'pdf':
-            with tempfile.NamedTemporaryFile(delete=False, suffix='.pdf') as tmp:
-                tmp.write(uploaded_file.read())
-                resume_text = load_pdf(tmp.name)
+                tmp_path = tmp.name
+            try:
+                resume_text = loader(tmp_path)
+            finally:
+                os.unlink(tmp_path)   # clean up: no orphaned temp files
     else:
         resume_text = ""
 else:
@@ -146,13 +142,16 @@ if st.button("Analyze"):
             resume_keywords = find_matches(keywords, resume_text)
             results = compare_keywords(job_keywords, resume_keywords)
             score, needed = calculate_score(job_keywords, results["in_both"])
+            weighted = calculate_weighted_score(job_keywords, results["in_both"], categories)
 
         # --- Display Results ---
         st.subheader("Results")
-        col1, col2, col3 = st.columns(3)
+        col1, col2, col3, col4 = st.columns(4)
         col1.metric("Match Score", f"{score:.1f}%")
-        col2.metric("Keywords Matched", len(results["in_both"]))
-        col3.metric("Keywords to Add", len(results["job_only"]))
+        col2.metric("Weighted Score", f"{weighted:.1f}%",
+                    help="Category-weighted: core DE tools count 3x a soft skill")
+        col3.metric("Keywords Matched", len(results["in_both"]))
+        col4.metric("Keywords to Add", len(results["job_only"]))
 
         if needed > 0:
             st.info(f"Add {needed:.0f} more keywords to reach 70%")

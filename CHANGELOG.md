@@ -4,6 +4,42 @@ All notable changes to this project are documented here.
 
 ---
 
+## [2.1.0] — July 2026
+
+### Added
+- **Weighted scoring** (from Planned) — keywords weighted by category importance;
+  core data-engineering tools count 3x a soft skill. Shown alongside the simple
+  score in both the app and CLI reports.
+- **Test suite** — pytest coverage for matching behavior (word boundaries,
+  plural tolerance, BOM/header handling, scoring).
+- Corpus additions from two JD-harvest triage passes (data analyst, dashboard,
+  workflow, scalable, insight, actionable insight, trends, efficiency, finance,
+  problem-solving).
+
+### Changed
+- **Matching engine rewritten**: word-boundary regex with plural tolerance is
+  now the primary matcher; fuzzy matching (RapidFuzz, punctuation-normalized)
+  is a fallback for long multi-word phrases only. "java" no longer matches
+  "javascript"; "sql" no longer matches "postgresql".
+- CLI default keyword source is now the three data/*.csv corpus files
+  (previous default pointed at a file that no longer exists — first-run
+  CLI usage produced 0% scores).
+- Keyword loading uses utf-8-sig (fixes BOM residue on the first keyword).
+- requirements.txt trimmed from a full pip freeze to actual dependencies;
+  thefuzz replaced with direct rapidfuzz.
+- URL scraping strips script/style/nav/header/footer before text extraction.
+
+### Removed
+- Role selector checkboxes in the app — they were never wired to keyword
+  loading, and the role-specific CSVs they implied don't exist. May return
+  backed by per-role keyword subsets.
+
+### Fixed
+- Uploaded resume temp files are now deleted after parsing.
+- Exclusion set no longer rebuilt on every loop iteration.
+
+---
+
 ## [2.0.0] — April 2026
 
 ### Added
@@ -74,5 +110,4 @@ All notable changes to this project are documented here.
 
 - **Click-to-dismiss false positives** — remove fuzzy matched keywords that don't actually apply, recalculate score dynamically
 - **Two-column view** — JD highlighted on left, matching resume bullet on right
-- **Weighted scoring** — keywords weighted by frequency across real job postings
 - **Employer Mode** — upload multiple resumes, rank all candidates against a JD, export to CSV
